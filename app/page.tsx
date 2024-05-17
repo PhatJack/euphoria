@@ -5,7 +5,7 @@ import Link from "next/link";
 
 export default function Home() {
 	return (
-		<main className="flex min-h-screen items-center justify-center gap-2 p-24">
+		<main className="flex w-full max-w-[1440px] min-h-screen items-center justify-center gap-2 p-24">
 			<ModeToggle></ModeToggle>
 			<Button asChild>
 				<Link href={"/login"}>
