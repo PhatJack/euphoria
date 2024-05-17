@@ -1,3 +1,4 @@
+"use client"
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import Image from "next/image";
 import { usePathname } from "next/navigation";
@@ -43,7 +44,7 @@ export default function NavBar() {
 		{ code: "he", name: "Hebrew" },
 	];
 	return (
-		<header className="w-full h-[100px] border-b flex justify-center items-center">
+		<header className="sticky top-0 w-full h-[100px] border-b flex justify-center items-center bg-white z-10">
 			<div className="w-full max-w-[1440px] flex items-center justify-between py-3 lg:px-10">
 				<Image src={"/assets/logo.svg"} alt="Logo" width={100} height={50} />
 				<Label className="flex items-center bg-secondary rounded-md px-3 h-11" htmlFor='search'>
@@ -60,7 +61,7 @@ export default function NavBar() {
 						</Button>
 						<Button variant={"outline"} className='text-primary w-24 h-11 px-5'>
 							<Link href={"/register"}>
-							Sign up
+								Sign up
 							</Link>
 						</Button>
 					</div>

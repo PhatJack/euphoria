@@ -82,7 +82,7 @@ export default function Register() {
 							<Label htmlFor="subscribe" className='font-normal'>Subscribe to our monthly newsletter</Label>
 						</div>
 					</div>
-					<Button type="submit" className="w-fit px-10 py-5 mt-3">
+					<Button type="submit" className="w-fit px-10 py-5">
 						Sign up
 					</Button>
 				</div>
