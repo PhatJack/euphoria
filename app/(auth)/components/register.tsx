@@ -14,10 +14,12 @@ import { Input } from "@/components/ui/input"
 import { Label } from "@/components/ui/label"
 import { EyeClosedIcon, EyeOpenIcon } from '@radix-ui/react-icons'
 import { Checkbox } from '@/components/ui/checkbox'
+import { useToast } from '@/components/ui/use-toast'
+import DialogPolicy from '@/components/signup/dialog-policy'
 
 export default function Register() {
 	const [isShowPassword, setIsShowPassword] = React.useState(false)
-
+	const { toast } = useToast()
 	return (
 
 		<Card className="max-w-xl border-none shadow-none">
@@ -73,7 +75,7 @@ export default function Register() {
 					<div className="flex flex-col gap-3">
 						<div className="flex items-center space-x-2">
 							<Checkbox id="terms" />
-							<Label htmlFor="terms" className='font-normal'>Agree to our <span className='underline'>Terms of use</span> and <span className='underline'>Privacy Policy</span></Label>
+							<Label htmlFor="termss" className='font-normal'>Agree to our <DialogPolicy title='Terms of use' /> and <DialogPolicy title='Privacy Policy'/> </Label>
 						</div>
 						<div className="flex items-center space-x-2">
 							<Checkbox id="subscribe" />
