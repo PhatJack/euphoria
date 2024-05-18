@@ -2,16 +2,15 @@
 import NavBar from "@/components/navbar";
 import Image from "next/image";
 import { usePathname } from "next/navigation";
-import { useRouter } from "next/router";
 
 interface AuthLayoutProps {
 	children: React.ReactNode;
 }
 export default function AuthLayout({ children }: AuthLayoutProps) {
-	// const router = useRouter()
 	const pathname = usePathname()
 	return (
 		<div className="w-full h-full flex flex-col">
+			<NavBar />
 			<div className="w-full h-[calc(100vh-100px)] flex">
 				<div className="w-full h-full relative">
 					{

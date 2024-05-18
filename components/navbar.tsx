@@ -44,9 +44,11 @@ export default function NavBar() {
 		{ code: "he", name: "Hebrew" },
 	];
 	return (
-		<header className="sticky top-0 w-full h-[100px] border-b flex justify-center items-center bg-white z-10">
+		<header className="sticky top-0 w-full h-[100px] border-b flex justify-center items-center bg-background z-10">
 			<div className="w-full max-w-[1440px] flex items-center justify-between py-3 lg:px-10">
-				<Image src={"/assets/logo.svg"} alt="Logo" width={100} height={50} />
+				<Link href={"/"}>
+					<Image src={"/assets/logo.svg"} alt="Logo" width={100} height={50} />
+				</Link>
 				<Label className="flex items-center bg-secondary rounded-md px-3 h-11" htmlFor='search'>
 					<MagnifyingGlassIcon className='size-6' />
 					<Input placeholder='Search' id='search' className='border-none shadow-none focus-visible:ring-0 h-11' />
@@ -54,13 +56,13 @@ export default function NavBar() {
 				<div className="flex items-center gap-5">
 					<DropDownList placeholder='Select a language' list={languages} getLabel={(item) => item.name} getValue={(item) => item.code} />
 					<div className="flex gap-3">
-						<Button className='h-11 w-24 px-5'>
-							<Link href={"/login"}>
+						<Button asChild className='h-11 w-24'>
+							<Link href={"/login"} className='justify-center items-center'>
 								Login
 							</Link>
 						</Button>
-						<Button variant={"outline"} className='text-primary w-24 h-11 px-5'>
-							<Link href={"/register"}>
+						<Button variant={"outline"} asChild className='text-primary w-24 h-11 px-5'>
+							<Link href={"/register"} className='flex justify-center items-center'>
 								Sign up
 							</Link>
 						</Button>
