@@ -10,7 +10,6 @@ export default function AuthLayout({ children }: AuthLayoutProps) {
 	const pathname = usePathname()
 	return (
 		<div className="w-full h-full flex flex-col">
-			<NavBar />
 			<div className="w-full h-[calc(100vh-100px)] flex">
 				<div className="w-full h-full relative">
 					{
