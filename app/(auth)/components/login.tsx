@@ -74,16 +74,16 @@ export default function Login() {
 							<Label htmlFor="password">Password</Label>
 							<p onClick={() => setIsShowPassword(!isShowPassword)} className="ml-auto inline-flex items-center gap-2 text-sm text-gray-500 cursor-pointer">
 								{
-									isShowPassword ? <EyeOpenIcon className="h-[1.2rem] w-[1.2rem] flex justify-center items-center" /> : <EyeClosedIcon className="h-[1.2rem] w-[1.2rem]" />
+									!isShowPassword ? <EyeOpenIcon className="h-[1.2rem] w-[1.2rem] flex justify-center items-center" /> : <EyeClosedIcon className="h-[1.2rem] w-[1.2rem]" />
 								}
 								{
-									!isShowPassword ? "Hide" : "Show"
+									isShowPassword ? "Hide" : "Show"
 								}
 							</p>
 						</div>
 						<Input
 							id="password"
-							type={!isShowPassword ? "text" : "password"}
+							type={isShowPassword ? "text" : "password"}
 							placeholder='Enter your password'
 							required className="h-fit p-3" />
 						<div className="flex justify-end">
