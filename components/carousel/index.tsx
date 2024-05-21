@@ -18,7 +18,7 @@ export default function HomeCarousel() {
 			className="w-full max-h-[720px] relative">
 			<CarouselContent>
 				{Array.from({ length: 5 }).map((_, index) => (
-					<CarouselItem key={index}>
+					<CarouselItem key={index} className="pl-0">
 						<div className={`w-full h-full min-h-[720px] ${index == 1 ? "bg-red-300" : index == 2 ? "bg-green-300" : index == 3 ? "bg-blue-300" : index == 4 ? "bg-yellow-300" : "bg-orange-300"} flex justify-center items-center`}>
 							{index}
 						</div>
