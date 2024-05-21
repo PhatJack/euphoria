@@ -44,7 +44,7 @@ export default function NavBar() {
 		{ code: "he", name: "Hebrew" },
 	];
 	return (
-		<header className="sticky top-0 w-full h-[100px] border-b flex justify-center items-center bg-background z-10">
+		<header className="sticky top-0 w-full h-[100px] border-b flex justify-center items-center bg-background z-10 shadow-md">
 			<div className="w-full max-w-[1440px] flex items-center justify-between py-3 lg:px-10">
 				<Link href={"/"}>
 					<Image src={"/assets/logo.svg"} alt="Logo" width={100} height={50} />
