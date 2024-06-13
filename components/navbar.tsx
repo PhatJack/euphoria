@@ -70,6 +70,20 @@ export default function NavBar() {
 			title: "Beauty"
 		},
 	]
+	//on scroll add class shadow-lg to header
+	React.useEffect(() => {
+		window.addEventListener("scroll", () => {
+			const header = document.querySelector("header");
+			console.log(window.scrollY)
+			if (header) {
+				if (window.scrollY > 0) {
+					header.classList.add("shadow-md")
+				} else {
+					header.classList.remove("shadow-md")
+				}
+			}
+		})
+	}, [])
 	return (
 		<header className="sticky top-0 w-full h-[100px] border-b flex justify-center items-center bg-background z-50">
 			<div className="w-full max-w-[1440px] flex items-center justify-between py-3 lg:px-10">
