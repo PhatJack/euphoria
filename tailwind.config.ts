@@ -25,6 +25,9 @@ const config = {
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
 		arsenic: "#3C4242",
+		"light-gray": "#807D7E",
+		"gray-x11" : "#BEBCBD",
+		"taupe-gray" : "#8A8989",
         primary: {
           DEFAULT: "hsl(var(--primary))",
           foreground: "hsl(var(--primary-foreground))",

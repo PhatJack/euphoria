@@ -1,7 +1,7 @@
 const fs = require('fs');
 
 // Load the JSON file
-const data = fs.readFileSync('C:\\Users\\ASUS\\Documents\\Frameworks\\Nextjs\\euphoria\\public\\json\\shop.json', 'utf8');
+const data = fs.readFileSync('C:\\Users\\ASUS\\Documents\\Frameworks\\Nextjs\\euphoria\\public\\json\\menshop.json', 'utf8');
 
 // Parse the JSON to an array of objects
 const products = JSON.parse(data);
@@ -28,6 +28,6 @@ const filteredProducts = products.map(filterProduct);
 const filteredData = JSON.stringify(filteredProducts, null, 2);
 
 // Save the filtered JSON to a new file
-fs.writeFileSync('C:\\Users\\ASUS\\Documents\\Frameworks\\Nextjs\\euphoria\\public\\json\\shop.json', filteredData);
+fs.writeFileSync('C:\\Users\\ASUS\\Documents\\Frameworks\\Nextjs\\euphoria\\public\\json\\menshop.json', filteredData);
 
 console.log('Filtered JSON saved successfully.');
