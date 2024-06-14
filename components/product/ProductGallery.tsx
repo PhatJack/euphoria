@@ -30,7 +30,7 @@ export default function ProductGallery({ images }: { images: { url: string }[] }
 									<Image
 										loading='lazy'
 										placeholder='blur'
-										blurDataURL={image.url}
+										blurDataURL={"https://th.bing.com/th/id/OIP.d3Q4E84qw3LPQ2v4NugfDgHaFP?rs=1&pid=ImgDetMain"}
 										fill src={image.url}
 										alt="Product Image"
 										className="object-cover object-center p-2 rounded-lg" />

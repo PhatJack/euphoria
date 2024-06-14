@@ -6,6 +6,7 @@ import Image from "next/image";
 import { Button } from "../ui/button";
 import { Label } from "../ui/label";
 import { toast } from "../ui/use-toast";
+import SizeGuideSheet from "../sheet/SizeGuideSheet";
 export default function ProductInformation({ product, gender }: { product: ProductDetail, gender: string }) {
 	const [swatch, setSwatch] = React.useState(product.swatches[0].colorName)
 	const [size, setSize] = React.useState("")
@@ -17,7 +18,8 @@ export default function ProductInformation({ product, gender }: { product: Produ
 				<div className="w-full flex flex-col gap-4">
 					<div className="w-full flex justify-between items-center">
 						<span className="font-medium text-sm">Select size</span>
-						<span className="font-medium text-sm text-gray-500 hover:underline underline-offset-2">Size guide</span>
+						<SizeGuideSheet />
+						{/* <span className="font-medium text-sm text-gray-500 hover:underline underline-offset-2">Size guide</span> */}
 					</div>
 					<div className="flex gap-5">
 						{
