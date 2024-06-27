@@ -1,7 +1,7 @@
 "use client"
 import { MagnifyingGlassIcon } from '@radix-ui/react-icons'
 import Image from "next/image";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { Input } from "./ui/input";
 import { Label } from './ui/label';
 import { Button } from './ui/button';
@@ -10,6 +10,7 @@ import Link from 'next/link';
 import * as React from 'react';
 export default function NavBar() {
 	const pathname = usePathname()
+	const router = useRouter();
 	const [isLoggedIn, setIsLoggedIn] = React.useState(false)
 	const languages = [
 		{ code: "en-US", name: "English (United States)" },
@@ -109,7 +110,7 @@ export default function NavBar() {
 				</Label>
 				<div className={`flex items-center ${pathname == "/login" || pathname == "/register" ? "gap-5" : "gap-2"}`}>
 					{
-						!isLoggedIn ? (
+						isLoggedIn ? (
 							<>
 								{/* <DropDownList placeholder='Select a language' list={languages} getLabel={(item) => item.name} getValue={(item) => item.code} /> */}
 								<div className="flex gap-3">
@@ -127,21 +128,21 @@ export default function NavBar() {
 							</>
 						) : (
 							<>
-								<Button variant={"secondary"} className='size-11 p-3 group hover:bg-primary'>
-									<svg className='stroke-light-gray group-hover:stroke-white' viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+								<Button onClick={() => router.push("/wishlist")} variant={"secondary"} className={`${pathname == "/wishlist" && "bg-primary"} size-11 p-3 group hover:bg-primary`}>
+									<svg className={`stroke-light-gray group-hover:stroke-white ${pathname == "/wishlist" && "stroke-white"}`} viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
 										<rect fill="none" height="256" width="256" />
 										<path d="M128,216S28,160,28,92A52,52,0,0,1,128,72h0A52,52,0,0,1,228,92C228,160,128,216,128,216Z" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
 									</svg>
 								</Button>
-								<Button variant={"secondary"} className='size-11 p-3 group hover:bg-primary'>
-									<svg className='stroke-light-gray group-hover:stroke-white' viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+								<Button onClick={() => router.push("/profile")} variant={"secondary"} className={`${pathname == "/profile" && "bg-primary"} size-11 p-3 group hover:bg-primary`}>
+									<svg className={`stroke-light-gray group-hover:stroke-white ${pathname == "/profile" && "stroke-white"}`} viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
 										<rect fill="none" height="256" width="256" />
 										<circle cx="128" cy="96" fill="none" r="64" stroke-miterlimit="10" stroke-width="16" />
 										<path d="M31,216a112,112,0,0,1,194,0" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
 									</svg>
 								</Button>
-								<Button variant={"secondary"} className='size-11 p-3 group hover:bg-primary'>
-									<svg className='stroke-light-gray group-hover:stroke-white' viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
+								<Button onClick={() => router.push("/cart")} variant={"secondary"} className={`${pathname == "/cart" && "bg-primary"} size-11 p-3 group hover:bg-primary`}>
+									<svg className={`stroke-light-gray group-hover:stroke-white ${pathname == "/cart" && "stroke-white"}`} viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg">
 										<rect fill="none" height="256" width="256" />
 										<path d="M184,184H69.8L41.9,30.6A8,8,0,0,0,34.1,24H16" fill="none" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
 										<circle cx="80" cy="204" fill="none" r="20" stroke-linecap="round" stroke-linejoin="round" stroke-width="16" />
