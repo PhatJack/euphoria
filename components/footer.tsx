@@ -47,9 +47,9 @@ export default function Footer() {
 	]
 
 	return (
-		<footer className="w-full max-h-[730px] bg-arsenic text-white flex flex-col justify-center items-center">
+		<footer className="w-full md:max-h-[730px] bg-arsenic text-white flex flex-col justify-center items-center">
 			<div className="w-full max-w-[1440px] h-full flex flex-col justify-center items-center gap-4 p-10">
-				<div className="w-full flex justify-between">
+				<div className="w-full grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
 					{
 						displayContent.map((content, index) => (
 							<article key={index} className="w-fit flex flex-col">
@@ -65,24 +65,24 @@ export default function Footer() {
 						))
 					}
 				</div>
-				<div className="w-full flex flex-col gap-4">
-					<p className="text-2xl font-bold text-right">Download The App</p>
-					<div className="flex justify-between items-center">
-						<div className="w-1/2 flex justify-start items-center gap-2">
-							<Button className='bg-white size-10 p-0 group'>
-								<InstagramLogoIcon className="size-5 text-black group-hover:text-white" />
-							</Button>
-							<Button className='bg-white size-10 p-0 group'>
-								<LinkedInLogoIcon className="size-5 text-black group-hover:text-white" />
-							</Button>
-							<Button className='bg-white size-10 p-0 group'>
-								<TwitterLogoIcon className="size-5 text-black group-hover:text-white" />
-							</Button>
-							<Button className='bg-white size-10 p-0 group'>
-								<GitHubLogoIcon className="size-5 text-black group-hover:text-white" />
-							</Button>
-						</div>
-						<div className="w-1/2 flex justify-end items-center gap-5">
+				<div className="w-full flex sm:flex-row flex-col gap-4">
+					<div className="w-1/2 flex justify-start items-center gap-2">
+						<Button className='bg-white size-10 p-0 group'>
+							<InstagramLogoIcon className="size-5 text-black group-hover:text-white" />
+						</Button>
+						<Button className='bg-white size-10 p-0 group'>
+							<LinkedInLogoIcon className="size-5 text-black group-hover:text-white" />
+						</Button>
+						<Button className='bg-white size-10 p-0 group'>
+							<TwitterLogoIcon className="size-5 text-black group-hover:text-white" />
+						</Button>
+						<Button className='bg-white size-10 p-0 group'>
+							<GitHubLogoIcon className="size-5 text-black group-hover:text-white" />
+						</Button>
+					</div>
+					<div className="w-1/2 flex flex-col sm:place-content-end gap-5 sm:mt-0 mt-5">
+						<p className="text-2xl font-bold sm:text-right">Download The App</p>
+						<div className="w-full flex sm:justify-end items-center gap-5">
 							<Image src="/assets/app-store.svg" width={140} height={50} alt="App Store" />
 							<Image src="/assets/google-play.svg" width={140} height={50} alt="Google Play" />
 						</div>
