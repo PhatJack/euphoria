@@ -21,7 +21,7 @@ export default function Men() {
 				<span className="font-bold text-xl text-arsenic">Men's Clothing</span>
 				<span>...</span>
 			</div>
-			<div className="w-full grid grid-cols-3 gap-8 items-center">
+			<div className="w-full grid grid-cols-1 min-[600px]:grid-cols-2 md:grid-cols-3 gap-8 items-center">
 				{
 					currentItems.map((item,index) => (
 						<ProductItemPreview key={index} product={item} />

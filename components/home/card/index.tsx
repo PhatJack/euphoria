@@ -25,7 +25,7 @@ export default function CardItem({ item }: CardItemProps) {
 				backgroundPosition: 'left',
 				backgroundSize: 'cover'
 			}}
-			className={`w-full h-80 max-h-80 overflow-hidden`}>
+			className={`w-full h-80 max-h-80 overflow-hidden flex-[1_1_350px]`}>
 			<CardContent className="bg-black/10 w-full h-full flex flex-col justify-center items-start gap-5">
 				<CardHeader className="p-0 text-white text-lg font-bold">{item.description}</CardHeader>
 				<div className="flex flex-col gap-2">

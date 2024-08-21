@@ -48,7 +48,7 @@ export default function Footer() {
 
 	return (
 		<footer className="w-full md:max-h-[730px] bg-arsenic text-white flex flex-col justify-center items-center">
-			<div className="w-full max-w-[1440px] h-full flex flex-col justify-center items-center gap-4 p-10">
+			<div className="w-full container h-full flex flex-col justify-center items-center gap-4 py-10">
 				<div className="w-full grid lg:grid-cols-4 sm:grid-cols-2 grid-cols-1 lg:gap-0 gap-5">
 					{
 						displayContent.map((content, index) => (
@@ -90,7 +90,7 @@ export default function Footer() {
 				</div>
 				<div className=""></div>
 			</div>
-			<div className="font-medium border-t w-full text-center py-6">
+			<div className="font-medium border-t w-full text-center py-6 md:text-base text-sm">
 				Copyright © 2024 Euphoria Jack Phat. All rights reserved.
 			</div>
 		</footer>

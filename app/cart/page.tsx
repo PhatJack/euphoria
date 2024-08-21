@@ -15,7 +15,7 @@ export default function Cart() {
 	const tableHeader = ["Product details", "price", "quantity", "shipping", "subtotal", "action"]
 
 	return (
-		<div className="w-full max-w-[1440px] mx-auto flex flex-col gap-5 py-5 lg:px-10 ">
+		<div className="w-full container flex flex-col gap-5 py-5 ">
 			<div className="w-full flex flex-col items-start gap-10">
 				<BreadcrumbWithArray list={["Cart"]} />
 			</div>
@@ -39,18 +39,18 @@ export default function Cart() {
 					}
 				</TableBody>
 			</Table>
-			<div className="size-full flex border rounded-md mt-3">
-				<div className="w-full flex flex-col place-content-start border-r p-10">
+			<div className="size-full flex flex-col md:flex-row border rounded-md mt-3">
+				<div className="w-full flex flex-col place-content-start border-b md:border-b-0 md:border-r p-6 sm:p-10">
 					<span className="text-arsenic text-xl font-bold">Discount Code</span>
 					<p className="text-muted-foreground text-xs mt-1">Enter your coupon if you have one</p>
-					<section className="mt-5 w-3/4 flex">
+					<section className="mt-5 lg:w-3/4 flex">
 						<Input type="text" className="rounded-l-md rounded-r-none" />
 						<Button variant={"default"} className="rounded-r-md rounded-l-none">Apply Coupon</Button>
 					</section>
-					<Button className="mt-8 w-1/3 border border-gray-x11 bg-white" variant={"secondary"}>Continue Shopping</Button>
+					<Button className="mt-8 lg:w-1/3 border border-gray-x11 bg-white" variant={"secondary"}>Continue Shopping</Button>
 				</div>
-				<div className="w-full flex place-content-end">
-					<div className="w-3/4 flex flex-col p-10">
+				<div className="w-full flex md:place-content-end">
+					<div className="md:w-3/4 w-full flex flex-col p-6 sm:p-10">
 						<section className="flex justify-between items-center mb-2">
 							<span>Sub Total</span>
 							<span>$513.00</span>

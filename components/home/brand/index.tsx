@@ -17,7 +17,7 @@ export default function Brand() {
 				</CardDescription>
 			</CardHeader>
 			<CardContent className="flex justify-center items-center">
-				<div className="flex gap-5">
+				<div className="flex justify-center items-center flex-wrap gap-5">
 					<div className="w-40 h-20 relative">
 						<Image
 							alt="Logo" sizes="100%"

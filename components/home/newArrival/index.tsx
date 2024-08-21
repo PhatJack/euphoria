@@ -11,9 +11,9 @@ export default function ArrivalCarousel() {
 			<CarouselContent>
 				{
 					ClothesType.map((item, i) => (
-						<CarouselItem key={i} className="basis-1/5">
+						<CarouselItem key={i} className="basis-full sm:basis-1/3 lg:basis-1/5">
 							<div className="flex w-full flex-col gap-4">
-								<div className="size-60 max-w-full relative overflow-hidden rounded-xl ">
+								<div className="h-60 max-w-full relative overflow-hidden rounded-xl ">
 									<Image
 										src={item.image}
 										sizes="100%"

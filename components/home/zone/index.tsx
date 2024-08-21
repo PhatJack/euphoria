@@ -9,7 +9,7 @@ export default function GridSavingZone() {
 		<div className="flex flex-col mb-20">
 			<TitleText text="Big Saving Zone" />
 			<div className="w-full grid gap-5 py-20">
-				<div className="w-full flex gap-5">
+				<div className="w-full flex flex-wrap gap-5">
 					{
 						CardItemData.slice(3, 6).map((item, i) => (
 							<div
@@ -20,7 +20,7 @@ export default function GridSavingZone() {
 									backgroundPosition: 'left',
 									backgroundSize: 'cover'
 								}}
-								className={`w-full h-80 rounded-xl overflow-hidden text-white flex flex-col odd:items-end odd:text-right even:text-left even:items-start gap-2 px-8 py-10`}>
+								className={`w-full flex-[1_1_350px] h-80 rounded-xl overflow-hidden text-white flex flex-col odd:items-end odd:text-right even:text-left even:items-start gap-2 px-8 py-10`}>
 								<p className="text-3xl font-bold max-w-32 text-pretty leading-tight">{item.title}</p>
 								<span className="font-medium">{item.description}</span>
 								<span className="font-bold uppercase">{item.discount}</span>
@@ -32,7 +32,7 @@ export default function GridSavingZone() {
 						))
 					}
 				</div>
-				<div className="w-full flex gap-5">
+				<div className="w-full flex flex-wrap gap-5">
 					{
 						CardItemData.slice(6, 8).map((item, i) => (
 							<div
@@ -43,7 +43,7 @@ export default function GridSavingZone() {
 									backgroundPosition: 'left',
 									backgroundSize: 'cover'
 								}}
-								className={`w-full h-80 rounded-xl overflow-hidden text-arsenic flex flex-col gap-2 px-8 py-10`}>
+								className={`w-full flex-[1_1_350px] h-80 rounded-xl overflow-hidden text-arsenic flex flex-col gap-2 px-8 py-10`}>
 								<p className="text-3xl font-bold max-w-32 text-pretty leading-tight">{item.title}</p>
 								<span className="font-medium">{item.description}</span>
 								<span className="font-bold uppercase">{item.discount}</span>

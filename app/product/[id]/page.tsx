@@ -34,7 +34,7 @@ export default function Page({ params }: { params: { id: string } }) {
 		gender = "Men"
 	}
 	return (
-		<div className="w-full max-w-[1440px] mx-auto p-10 flex flex-col items-start gap-10">
+		<div className="w-full container py-10 flex flex-col items-start gap-10">
 			<div className="w-full flex gap-5 pb-10">
 				<Suspense
 					fallback={

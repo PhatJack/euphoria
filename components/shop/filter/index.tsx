@@ -14,12 +14,12 @@ export default function Filter() {
 	const sizeArray = ["XXS","XS","S", "M", "L", "XL", "XXL", "3XL", "4XL"];
 
 	return (
-		<div className="min-w-[280px] w-[280px] h-full flex flex-col border border-gray-x11 text-taupe-gray">
-			<article className="w-full flex justify-between items-center py-3.5 px-5 border-b border-gray-x11">
+		<div className="min-w-[280px] w-full lg:w-[280px] h-full flex flex-col border border-gray-x11 text-taupe-gray divide-y divide-gray-x11">
+			<article className="w-full flex justify-between items-center py-3.5 px-5">
 				<span className="text-lg font-medium ">Filter</span>
 				<MixerVerticalIcon className="size-5" />
 			</article>
-			<ul className="flex flex-col gap-3 p-5 border-b border-gray-x11">
+			<ul className="lg:flex lg:flex-col grid grid-cols-2 md:grid-cols-4 gap-3 p-5">
 				{
 					ClothesType.map((item, index) => (
 						<li key={index} className="">
@@ -28,11 +28,11 @@ export default function Filter() {
 					))
 				}
 			</ul>
-			<div className="flex flex-col border-b border-gray-x11">
+			<div className="flex flex-col">
 				<article onClick={() => {
 					setIsOpenPrice(prev => !prev)
 				}}
-					className="w-full flex justify-between items-center py-3.5 px-5">
+					className="w-full flex justify-between items-center py-3.5 px-5 border-b border-gray-x11">
 					<span className="text-lg font-medium ">Price</span>
 					{
 						isOpenPrice ? (
@@ -47,7 +47,7 @@ export default function Filter() {
 						? { display: "flex", transition: "display 500ms linear" }
 						: { display: "none", transition: "display 500ms linear" }
 					}
-					className={`py-3.5 px-5 flex flex-col gap-4 border-t border-gray-x11`}>
+					className={`py-3.5 px-5 flex flex-col gap-4`}>
 					<div className="flex items-center space-x-2 w-full ">
 						<Checkbox id="0-25" />
 						<Label className="text-black cursor-pointer" htmlFor="0-25">$0 - $25</Label>
@@ -70,11 +70,11 @@ export default function Filter() {
 					</div>
 				</div>
 			</div>
-			<div className="flex flex-col border-b border-gray-x11">
+			<div className="flex flex-col">
 				<article onClick={() => {
 					setIsOpenColor(prev => !prev)
 				}}
-					className="w-full flex justify-between items-center py-3.5 px-5">
+					className="w-full flex justify-between items-center py-3.5 px-5 border-b border-gray-x11">
 					<span className="text-lg font-medium ">Color</span>
 					{
 						isOpenColor ? (
@@ -89,7 +89,7 @@ export default function Filter() {
 						? { display: "flex", transition: "display 500ms linear" }
 						: { display: "none", transition: "display 500ms linear" }
 					}
-					className={`py-3.5 px-5 flex justify-between items-center gap-2 border-t border-gray-x11`}>
+					className={`py-3.5 px-5 flex justify-between items-center gap-2`}>
 					<div className="w-full flex flex-col justify-center items-center gap-2">
 						{
 							colorArray.splice(0, 3).map((item, index) => (
@@ -141,11 +141,11 @@ export default function Filter() {
 
 				</div>
 			</div>
-			<div className="flex flex-col border-b border-gray-x11">
+			<div className="flex flex-col">
 				<article onClick={() => {
 					setIsOpenSize(prev => !prev)
 				}}
-					className="w-full flex justify-between items-center py-3.5 px-5">
+					className="w-full flex justify-between items-center py-3.5 px-5 border-b border-gray-x11">
 					<span className="text-lg font-medium ">Size</span>
 					{
 						isOpenSize ? (
@@ -159,7 +159,7 @@ export default function Filter() {
 						? { display: "flex", transition: "display 500ms linear" }
 						: { display: "none", transition: "display 500ms linear" }
 					}
-					className={`py-3.5 px-5 flex justify-between items-center gap-2 border-t border-gray-x11`}>
+					className={`py-3.5 px-5 flex justify-between items-center gap-2`}>
 						<div className="flex flex-col gap-2">
 							{
 								sizeArray.slice(0,3).map((item,index) => (
@@ -169,14 +169,14 @@ export default function Filter() {
 						</div>
 						<div className="flex flex-col gap-2">
 							{
-								sizeArray.slice(0,3).map((item,index) => (
+								sizeArray.slice(3,6).map((item,index) => (
 									<span className="w-full flex justify-center items-center h-full px-5 py-1.5 hover:border-black/70 font-medium transition-all cursor-pointer text-sm border-2 rounded-xl" key={index}>{item}</span>
 								))
 							}
 						</div>
 						<div className="flex flex-col gap-2">
 							{
-								sizeArray.slice(0,3).map((item,index) => (
+								sizeArray.slice(6,9).map((item,index) => (
 									<span className="w-full flex justify-center items-center h-full px-5 py-1.5 hover:border-black/70 font-medium transition-all cursor-pointer text-sm border-2 rounded-xl" key={index}>{item}</span>
 								))
 							}

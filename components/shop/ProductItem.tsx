@@ -15,7 +15,7 @@ export default function ProductItemPreview({ product }: ProductItemPreviewProps)
 	const { toast } = useToast()
 	const router = useRouter()
 	return (
-		<div onClick={() => router.push(`/product/${product.id}`)} className="w-full h-fit flex flex-col gap-3 group cursor-pointer">
+		<div onClick={() => router.push(`/product/${product.id}`)} className="w-full flex-[1_1_250px] h-fit flex flex-col gap-3 group cursor-pointer">
 			<div className="relative w-full h-[350px] rounded-xl overflow-hidden">
 				<Image
 					src={product.modelImage}
